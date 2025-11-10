@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -9,6 +9,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true
+    },
+    phone: {                     // <-- Added phone field
+        type: String,
+        required: true,
+        unique: true              // ensures no duplicate phone numbers
     },
     password: {
         type: String,
